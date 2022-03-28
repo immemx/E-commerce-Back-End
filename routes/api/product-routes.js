@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     {
       model: Tag,
       attributes: ['id', 'tag_name'],
-      through: { productTag, attributes: [] },
+      through: { ProductTag, attributes: [] },
       as: 'tags'
     }]
   })
@@ -39,22 +39,17 @@ router.get('/:id', (req, res) => {
     },
     {
       model: Tag,
-      attributes: ['id', 'tag_name'],
+      attributes: ['tag_name'],
       through: { ProductTag, attributes: [] },
       as: 'tags'
-    }]
-  })
-  .then(dbReturn => {
-    if(!dbReturn) {
-      res.status(404).json({ message: 'ID not found in database'})
-      return;
     }
-    res.json(dbReturn)
+    ]
   })
-  .catch(err => {
-    console.log(err);
-    res.status(500).json(err);
-  })
+    .then(productData => res.json(productData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 // create new product
