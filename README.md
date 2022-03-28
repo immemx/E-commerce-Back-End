@@ -11,7 +11,7 @@
 ## Description
 ### My week #13 - Object-Relational Mapping (ORM) Challenge: E-commerce Back End
 
-VIDEO WALKTHROUGH: LINK
+VIDEO WALKTHROUGH: https://youtu.be/HLv4gCK3fKA
 
 This project is an example of my work with ORM!
 
@@ -30,11 +30,13 @@ type "npm i" in the route of the directory to install all neccessary node_module
 
 1. type "npm install"
 
-2. Open Mysql command line and run the following codes, "SOURCE db/db.sql" "SOURCE db/schema.sql" "SOURCE db/seeds.sql" to create and populate the database
+2. Open Mysql command line and run the following codes, "SOURCE db/db.sql" to create the database
 
-3. type "node index.js" to run the application!  
+3. type "node run seed" to seed the application
 
-4. Start selecting options!
+4. type "node run start" to run the application
+
+5. Open insomnia or connect with a browsers!
 
 ## License
 
